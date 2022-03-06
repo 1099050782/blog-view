@@ -1,0 +1,24 @@
+0 info it worked if it ends with ok
+1 verbose cli [
+1 verbose cli   'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'D:\\Node\\node_global\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'run',
+1 verbose cli   'dev'
+1 verbose cli ]
+2 info using npm@3.8.6
+3 info using node@v16.13.0
+4 verbose stack Error: ENOENT: no such file or directory, open 'D:\Code\blog-view\package.json'
+5 verbose cwd D:\Code\blog-view
+6 error Windows_NT 10.0.19042
+7 error argv "C:\\Program Files\\nodejs\\node.exe" "D:\\Node\\node_global\\node_modules\\npm\\bin\\npm-cli.js" "run" "dev"
+8 error node v16.13.0
+9 error npm  v3.8.6
+10 error path D:\Code\blog-view\package.json
+11 error code ENOENT
+12 error errno -4058
+13 error syscall open
+14 error enoent ENOENT: no such file or directory, open 'D:\Code\blog-view\package.json'
+15 error enoent ENOENT: no such file or directory, open 'D:\Code\blog-view\package.json'
+15 error enoent This is most likely not a problem with npm itself
+15 error enoent and is related to npm not being able to find a file.
+16 verbose exit [ -4058, true ]

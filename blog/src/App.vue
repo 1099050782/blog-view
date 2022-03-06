@@ -1,5 +1,7 @@
 <template>
-  <router-view/>
+  <div id="app">
+    <router-view/>
+  </div>
 </template>
 
 <script>
@@ -14,4 +16,9 @@ export default {
 
 <style>
 @import "assets/css/base.css";
+
+#app {
+  height: 100%;
+  overflow: auto;
+}
 </style>
