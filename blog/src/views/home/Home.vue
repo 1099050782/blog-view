@@ -1,11 +1,11 @@
 <template>
   <a-layout class="layout-body">
     <!--右边-->
-    <a-layout-sider class="layout-body-sider" v-if="false">
+    <a-layout-sider class="layout-body-sider" v-if="!false">
       <div class="introduce">
         <div class="introduce-avatar">
           <div style="text-align: center">
-            <a-avatar :size="128" icon="user"/>
+            <a-avatar :size="128" src="https://img1.baidu.com/it/u=3161656755,1396392948&fm=253&fmt=auto&app=138&f=JPEG?w=863&h=498"/>
           </div>
         </div>
         <div class="introduce-author">
@@ -40,16 +40,18 @@
       <a-layout-header class="layout-header" v-if="!false">
         <span class="header-blog">Code Fruit Blog</span>
         <span>
+          <a-icon @click="NewEdit" :style="{ fontSize: '24px', color: '#fff', float: 'right', margin: '17px 0 17px 17px'}" type="form"/>
+        </span>
+        <span>
             <a-input-search placeholder="请输入文章名称" class="header-input" @search="onSearch"/>
-          </span>
+        </span>
       </a-layout-header>
       <a-layout-content class="layout-Content">
         <!--主体-->
         <!--首页-->
-        <Content v-if="false"/>
+        <Content v-if="!false"/>
         <!--详情页-->
         <Details v-if="false"/>
-        <!--编辑页-->
       </a-layout-content>
     </a-layout>
   </a-layout>
@@ -58,17 +60,22 @@
 <script>
 import Content from "../content/Content";
 import Details from "../content/Details";
+import Edit from "../content/Edit";
 
 export default {
   name: "Home",
   components: {
     Content,
     Details,
+    Edit
   },
   methods: {
     onSearch(value) {
       console.log(value);
     },
+    NewEdit() {
+      this.$router.push({ path: '../newedit' })
+    }
   }
 }
 </script>
@@ -169,6 +176,7 @@ export default {
       float: right;
       top: 13px;
     }
+
   }
 
   .layout-Content {

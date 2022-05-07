@@ -3,6 +3,9 @@ import Router from 'vue-router'
 import Login from "../views/login/Login";
 import Register from "../views/register/Register";
 import Home from "../views/home/Home"
+import Details from "../views/content/Details";
+import Edit from "../views/content/Edit";
+import NewEdit from "../views/content/NewEdit";
 
 Vue.use(Router)
 
@@ -26,6 +29,21 @@ const router = new Router({
       path: '/home',
       name: 'Home',
       component: Home,
+    },
+    {
+      path: '/details',
+      name: 'details',
+      component: Details,
+    },
+    {
+      path: '/edit',
+      name: 'edit',
+      component: Edit,
+    },
+    {
+      path: '/newedit',
+      name: 'newedit',
+      component: NewEdit,
     }
   ],
   mode: 'history'

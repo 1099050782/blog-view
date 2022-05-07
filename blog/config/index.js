@@ -12,7 +12,7 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
       '/api': {
-        target: 'http://cguo.me/',//设置你调用的接口域名和端口号 别忘了加http
+        target: 'http://172.20.10.3:8888',//设置你调用的接口域名和端口号 别忘了加http
         changeOrigin: true,    //這裡true表示实现跨域
         pathRewrite: {
           '^/api': ""
